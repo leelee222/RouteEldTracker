@@ -1,0 +1,24 @@
+# Django Framework
+Django>=4.2,<5
+
+# Gunicorn for production server
+gunicorn
+
+# CORS Headers
+django-cors-headers
+
+# Database (uncomment the one you need)
+# PostgreSQL
+psycopg2-binary  
+# MySQL
+# mysqlclient  
+# SQLite (built-in)
+
+# Environment Variables
+python-dotenv
+
+# ASGI Support (if using Daphne for WebSockets)
+# daphne
+
+# Other Useful Libraries
+whitenoise  # For serving static files
