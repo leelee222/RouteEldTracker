@@ -22,3 +22,4 @@ python-dotenv
 
 # Other Useful Libraries
 whitenoise  # For serving static files
+djangorestframework
