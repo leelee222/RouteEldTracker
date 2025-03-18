@@ -159,3 +159,9 @@ CORS_ALLOW_HEADERS = [
     'x-csrftoken',
     'x-requested-with',
 ]
+
+ALLOWED_HOSTS = [
+    "routeeldtracker-production.up.railway.app",
+    "localhost",
+    "127.0.0.1",
+]
