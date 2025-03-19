@@ -8,10 +8,16 @@ const DriverLogChart = () => {
     const chartRef = useRef(null);
 
     useEffect(() => {
-        fetch("/api/driver_logs/")
+        fetch("https://routeeldtracker-production.up.railway.app/api/driver_logs/")
             .then((res) => res.json())
-            .then((data) => setLogs(data))
-            .catch((error) => console.error("Error fetching logs:", error));
+            .then((data) => {
+                console.log("Fetched driver logs:", data);
+                setLogs(data);
+            })
+            .catch((error) => {
+                console.error("Error fetching logs:", error);
+                setLogs([]);
+            });
     }, []);
 
     const generatePDF = () => {
