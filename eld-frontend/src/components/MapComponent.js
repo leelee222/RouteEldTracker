@@ -37,7 +37,7 @@ const MapComponent = ({ route }) => {
 
                 if (!L || !isMounted || !mapRef.current) return;
 
-                const defaultCenter = [39.8283, -98.5795]; // Center of USA
+                const defaultCenter = [39.8283, -98.5795];
                 const defaultZoom = 5;
 
                 const safeRoute = Array.isArray(route) && route.length > 0 ? route : [];
@@ -53,9 +53,9 @@ const MapComponent = ({ route }) => {
                     mapInstanceRef.current = L.map(mapRef.current, {
                         center: center,
                         zoom: defaultZoom,
-                        zoomControl: false, // Prevents unnecessary zooming
-                        dragging: true, // Keeps dragging enabled
-                        scrollWheelZoom: false // Prevents accidental zooming
+                        zoomControl: false,
+                        dragging: true,
+                        scrollWheelZoom: false
                     });
 
                     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

@@ -10,7 +10,6 @@ import {
 } from '@mui/material';
 
 const TripForm = ({ onSubmit }) => {
-    // Pre-defined city options for form inputs
     const cityOptions = [
       "New York, NY",
       "Boston, MA", 
@@ -34,7 +33,6 @@ const TripForm = ({ onSubmit }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         
-        // Call the onSubmit function passed from parent component
         if (onSubmit) {
             onSubmit(trip);
         }
