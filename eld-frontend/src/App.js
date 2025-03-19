@@ -563,7 +563,7 @@ function App() {
         dropoff_location_lng: getCoordinates(tripData.dropoff_location).lng,
       };
 
-      const response = await axios.post("-/api/trips/", enrichedTripData);
+      const response = await axios.post("https://routeeldtracker-production.up.railway.app/api/trips/", enrichedTripData);
       setTrips([...trips, response.data]);
       generateRouteAndLogs([...trips, response.data]);
     } catch (error) {
