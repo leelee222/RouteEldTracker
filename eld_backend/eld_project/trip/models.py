@@ -4,14 +4,14 @@ class Trip(models.Model):
     current_location = models.CharField(max_length=255)
     pickup_location = models.CharField(max_length=255)
     dropoff_location = models.CharField(max_length=255)
-    current_cycle_used = models.FloatField()  # in hours
+    current_cycle_used = models.FloatField()
     created_at = models.DateTimeField(auto_now_add=True)
     
     
 class DriverLog(models.Model):
     driver = models.CharField(max_length=100)
     date = models.DateField()
-    off_duty = models.FloatField()  # Hours
+    off_duty = models.FloatField()
     sleeper_berth = models.FloatField()
     driving = models.FloatField()
     on_duty = models.FloatField()

@@ -10,7 +10,8 @@ const DriverLogChart = () => {
     useEffect(() => {
         fetch("/api/driver_logs/")
             .then((res) => res.json())
-            .then((data) => setLogs(data));
+            .then((data) => setLogs(data))
+            .catch((error) => console.error("Error fetching logs:", error));
     }, []);
 
     const generatePDF = () => {
